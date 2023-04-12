@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>HTML+CSS</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+		<header>
+			<div id="logo" onclick="slowScroll('#top')">
+				<span>itProger</span>
+		    </div>
+		    <div id="about">
+		    	<a href="#" onclick="slowScroll('#main')">Возможности</a>
+		    	<a href="#" onclick="slowScroll('#overiew')">Преимущества</a>
+		    	<a href="#" onclick="slowScroll('#contacts')">Контакты</a>
+		    	<a href="#" onclick="slowScroll('#faq')">FAQ</a>
+		    </div>
+		</header>
+			<div id="top">
+				<h1>Программирование</h1>
+				<h3>как способ жизни!</h3>
+			</div>
+			<div id="main">
+				<div class="intro">
+					<h2>Наши услуги помогут вам!</h2>
+					<span>Большой выбор всего,что может вам пригодиться.</span>
+				</div>
+				<div class="text">
+					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eum, cumque, nemo officiis architecto dicta quisquam repellat! Obcaecati ratione sed voluptatibus excepturi dicta, aut, quibusdam, consectetur mollitia, atque fuga ipsa.</span>
+				</div>
+			</div >
+            <div id="overview">
+            	<h2>Преимущества.</h2>
+            	<h4>С нами все проще.</h4>
+            	<div class="img">
+            		<img src="images/2.jpg">
+            		<span>Создание Андроид игры на движке Unity.</span>
+            	</div>
+            	<div class="img">
+            		<img src="images/3.jpg">
+            		<span>Уроки Vue.js для начинающих.</span>
+            	</div>
+            	<div class="img">
+            		<img src="images/4.jpg">
+            		<span>Уроки Qt Creator | Графический интерфейс на С++.</span>
+            	</div>
+            	<div class="img">
+            		<img src="images/5.jpg">
+            		<span>Изучение C++ от новичка до профи.</span>
+            	</div>
+            </div>
+            <div id="contacts">
+            	<center><h5>Обратная связь</h5></center>
+            	<form id="form_input">
+            		<label for="name">Имя<span>*</span></label><br>
+            		<input type="text" name="name" placeholder="Введите имя" id="name"><br>
+            		<label for="email">Ваша почта<span>*</span></label><br>
+            		<input type="email" name="email" placeholder="Введите email" id="email"><br>
+            		<label for="message">Сообщение<span>*</span></label><br>
+            		<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+            		<div id="mess_send" class="btn">Отправить</div>
+            	</form>
+            </div>
+				<div id="faq">
+					<div>
+						<span class="tittle">Оплата</span><br>
+						<span class="heading">Как будет проходить оплата?</span>
+						<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Iure ullam perferendis error magni nobis nam sit, minima impedit! Dolor accusamus quas ex ratione ea exercitationem nemo aspernatur magnam eius excepturi.</p>
+						<span class="heading">Как будет проходить оплата?</span>
+						<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Iure ullam perferendis error magni nobis nam sit, minima impedit! Dolor accusamus quas ex ratione ea exercitationem nemo aspernatur magnam eius excepturi.</p>
+						<span class="heading">Как будет проходить оплата?</span>
+						<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Iure ullam perferendis error magni nobis nam sit, minima impedit! Dolor accusamus quas ex ratione ea exercitationem nemo aspernatur magnam eius excepturi.</p>
+					</div>
+					<div>
+						<span class="tittle">Информация</span><br>
+						<span class="heading">Что входит в услуги сервиса?</span>
+						<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Iure ullam perferendis error magni nobis nam sit, minima impedit! Dolor accusamus quas ex ratione ea exercitationem nemo aspernatur magnam eius excepturi.</p>
+						<span class="heading">Что входит в услуги сервиса?</span>
+						<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Iure ullam perferendis error magni nobis nam sit, minima impedit! Dolor accusamus quas ex ratione ea exercitationem nemo aspernatur magnam eius excepturi.</p>
+						<span class="heading">Что входит в услуги сервиса?</span>
+						<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Iure ullam perferendis error magni nobis nam sit, minima impedit! Dolor accusamus quas ex ratione ea exercitationem nemo aspernatur magnam eius excepturi.</p>
+					</div>
+					<div>
+						<span class="tittle">Гарантии</span><br>
+						<span class="heading">Какие гарантии есть?</span>
+						<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Iure ullam perferendis error magni nobis nam sit, minima impedit! Dolor accusamus quas ex ratione ea exercitationem nemo aspernatur magnam eius excepturi.</p>
+						<span class="heading">Какие гарантии есть?</span>
+						<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Iure ullam perferendis error magni nobis nam sit, minima impedit! Dolor accusamus quas ex ratione ea exercitationem nemo aspernatur magnam eius excepturi.</p>
+						<span class="heading">Какие гарантии есть?</span>
+						<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Iure ullam perferendis error magni nobis nam sit, minima impedit! Dolor accusamus quas ex ratione ea exercitationem nemo aspernatur magnam eius excepturi.</p>
+					</div>
+				</div>
+			</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<script>
+			function slowScroll(id){
+				$('html','body').animate({
+                   scrollTop: $(id).offset().top
+				}, 500);
+			}
+
+			$(document).on("scroll",function () {
+                if ($(window).scrollTop() === 0)
+                	$("header").removeClass("fixed");
+                else
+                	$("header").attr("class","fixed");
+			});
+		</script>
+	</body>
+</html>
