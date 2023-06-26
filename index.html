@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 <body>
     <header>
         <div id="logo" onclick="SlowScroll('#top')">
-           <span>ItProger</span>
+           <span>itProger</span>
         </div>
         <div id="about">
             <a href="#" onclick="SlowScroll('#main')">Возможности</a>
@@ -20,11 +20,19 @@
     </header>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
-        function SlowScroll(id){
+        function SlowScroll(id) {
             $('body').animate({
                 scrollTop: $(id).offset().top
-            },500)
+            }, 500);
         }
+
+        $(document).on("scroll", function () {
+           if($(window).scrollTop() === 0)
+             $("header").removeClass("fixed");
+           else
+             $("header").attr("class", "fixed");
+           
+        });
     </script>
     
 </body>
